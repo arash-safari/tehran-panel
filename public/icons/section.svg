@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #707070;
+        stroke-width: 8px;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="section" transform="translate(-136 -562)">
+    <g id="Rectangle_7" data-name="Rectangle 7" class="cls-1" transform="translate(136 562)">
+      <rect class="cls-2" width="200" height="100"/>
+      <rect class="cls-3" x="4" y="4" width="192" height="92"/>
+    </g>
+  </g>
+</svg>

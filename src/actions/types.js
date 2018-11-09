@@ -1,0 +1,13 @@
+export const ADD_PART = "ADD_PART";
+export const ADD_ONE_SECTION = "ADD_ONE_SECTION";
+export const ADD_POST = "ADD_POST";
+export const ADD_PEOPLE = "ADD_PEOPLE";
+export const ADD_TWO_SECTION = "ADD_TWO_SECTION";
+export const ADD_TWO_SECTION_BIG = "ADD_TWO_SECTION_BIG";
+// export const ADD_SECTION = "ADD_SECTION";
+export const DELETE_Module = "DELETE_SECTION";
+export const CHANGE_SITE_CONTENT = "CHANGE_SITE_CONTENT";
+export const CHANGE_SITE_MODULE = "CHANGE_SITE_MODULE";
+export const UPLOAD_DATA = "UPLOAD_DATA";
+export const PAGE_NAME = "PAGE_NAME";
+export const GET_ALL_PAGE_NAME = "GET_ALL_PAGE_NAME";
