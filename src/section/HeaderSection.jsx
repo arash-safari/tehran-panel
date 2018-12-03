@@ -13,7 +13,8 @@ import {getRandomColor} from "../module/Color";
 
 const styles = theme => ({
   root: {
-    width: '100%',
+    width: 'calc(100% - 20px)',
+      marginRight:20,
     height: "80px !important",
   },
   grow: {
@@ -63,29 +64,26 @@ class HeaderSection extends Component {
     this.addToSiteContent({type: "PartModule"});
   };
   addOneSection = () => {
-    this.addToSiteContent({type: "OneSectionModule", title: "oneSectionModule"});
+    this.addToSiteContent({type: "OneSectionModule"});
   };
   addPeople = () => {
-    this.addToSiteContent({type: "PeopleModule", title: "peopleModule"});
+    this.addToSiteContent({type: "PeopleModule"});
   };
   addPost = () => {
-    this.addToSiteContent({type: "PostModule", title: "postModule"});
+    this.addToSiteContent({type: "PostModule"});
   };
   addTwoSectionBig = () => {
-    this.addToSiteContent({type: "TwoSectionBigModule", title: "twoSectionBigModule"});
+    this.addToSiteContent({type: "TwoSectionBigModule"});
   };
   addTwoSection = () => {
-    this.addToSiteContent({type: "TwoSectionModule", title: "twoSectionModule"});
+    this.addToSiteContent({type: "TwoSectionModule"});
   };
 
   addToSiteContent = (params) => {
     const siteContent = this.props.siteContent.all;
-    console.log(siteContent);
-    console.log(params);
     siteContent.En.push(params);
     siteContent.Fa.push(params);
     siteContent.bcolor.push(getRandomColor());
-    console.log(siteContent);
     this.props.changeSiteContent(siteContent);
   };
   saveData = ()=>{
@@ -96,17 +94,17 @@ class HeaderSection extends Component {
     const {anchorEl, mobileMoreAnchorEl} = this.state;
     const {classes} = this.props;
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-    const sectionIcon = <Image src="./icons/section.svg" style={{width: 60, height: 60, margin: "10px 20px"}}
+    const sectionIcon = <Image src="/icons/section.svg" style={{width: 60, height: 60, margin: "10px 20px"}}
                                responsive></Image>;
-    const postIcon = <Image src="./icons/post.svg" style={{width: 60, height: 60, margin: "10px 0px 10px 20px"}}
+    const postIcon = <Image src="/icons/post.svg" style={{width: 60, height: 60, margin: "10px 0px 10px 20px"}}
                             responsive/>;
-    const profileIcon = <Image src="./icons/profile.svg" style={{width: 60, height: 60, margin: "10px 20px"}}
+    const profileIcon = <Image src="/icons/profile.svg" style={{width: 60, height: 60, margin: "10px 20px"}}
                                responsive/>;
-    const oneElementIcon = <Image src="./icons/One_element.svg" style={{width: 60, height: 60, margin: "10px 20px"}}
+    const oneElementIcon = <Image src="/icons/One_element.svg" style={{width: 60, height: 60, margin: "10px 20px"}}
                                   responsive/>;
-    const twoElementIcon = <Image src="./icons/Two_element.svg" style={{width: 60, height: 60, margin: "10px 20px"}}
+    const twoElementIcon = <Image src="/icons/Two_element.svg" style={{width: 60, height: 60, margin: "10px 20px"}}
                                   responsive/>;
-    const twoElementBigIcon = <Image src="./icons/Two_element_big.svg"
+    const twoElementBigIcon = <Image src="/icons/Two_element_big.svg"
                                      style={{width: 60, height: 60, margin: "10px 20px"}} responsive/>;
     return (
       <Paper className="header">

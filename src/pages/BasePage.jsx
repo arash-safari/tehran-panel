@@ -16,7 +16,7 @@ class BasePage extends Component {
         <div style={{width: this.state.sidebarWidth + "px"}}>
           <SideBarSection onExitMenu={this.onExitMenu} pathname="localhost:3000" />
         </div>
-        <div className="page-body" style={{marginLeft:50}}>
+        <div style={{marginLeft:this.state.sidebarWidth+"px"}}>
           {this.getBodyPage()}
         </div>
       </div>

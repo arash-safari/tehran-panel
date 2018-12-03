@@ -24,6 +24,7 @@ class PartModule extends Component {
         title:""
       },
     },
+      initial:"",
     bcolor:"",
     name:"",
   };
@@ -61,6 +62,11 @@ class PartModule extends Component {
       data[lang][type] = e.target.value;
       this.setState(data);
     };
+      if("title" in this.props.data.En){
+          if(!this.state.initial){
+              this.setState({data:this.props.data,initial:true})
+          }
+      }
     const {classes} = this.props;
     let {data} = this.state;
     return(

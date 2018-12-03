@@ -11,3 +11,4 @@ export const CHANGE_SITE_MODULE = "CHANGE_SITE_MODULE";
 export const UPLOAD_DATA = "UPLOAD_DATA";
 export const PAGE_NAME = "PAGE_NAME";
 export const GET_ALL_PAGE_NAME = "GET_ALL_PAGE_NAME";
+export const GET_PAGE_BY_ID = "GET_PAGE_BY_ID";

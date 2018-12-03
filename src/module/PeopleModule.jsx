@@ -26,6 +26,7 @@ class PeopleModule extends Component {
         src:"",
       },
     },
+      initial:false,
   };
   constructor(props){
     super(props);
@@ -60,7 +61,11 @@ class PeopleModule extends Component {
       data[lang][type] = e.target.value;
       this.setState(data);
     };
-
+      if("name" in this.props.data.En){
+          if(!this.state.initial){
+              this.setState({data:this.props.data,initial:true})
+          }
+      }
     const onLoad = (fileName)=>{
       const {data} = this.state;
       data["En"]["src"] = fileName;

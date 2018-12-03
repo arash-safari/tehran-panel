@@ -27,7 +27,8 @@
   to { transform: rotate(360deg); }
 }
 .header{
-  width:100vw;
+  width:calc(100vw - 30px);
+  margin-right: 20px;
   height:80px;
   /*background-color: #6d84b4;*/
   background-color: #FFF;

@@ -9,6 +9,7 @@ class FieldGroupModule extends Component {
         <ControlLabel>{this.props.label}</ControlLabel>
         <FormControl {... this.props.props}
                      value={this.props.value}
+                     placeholder={this.props.placeholder}
                      onChange={this.props.onChange}
                      componentClass={this.props.componentClass}
         />

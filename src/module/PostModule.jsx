@@ -21,6 +21,7 @@ class PostModule extends Component {
         dataArray: [],
       },
     },
+      initial:false,
     bcolor:""
   };
   constructor(props){
@@ -56,6 +57,11 @@ class PostModule extends Component {
     let EndataArray = this.state.data.En.dataArray;
     let FadataArray = this.state.data.Fa.dataArray;
     let data = this.state.data;
+      if("dataArray" in this.props.data.En){
+          if(!this.state.initial){
+              this.setState({data:this.props.data,initial:true})
+          }
+      }
     const onSelectContext = () => {
       EndataArray.push({
         key: EndataArray ? EndataArray.length + 1 : 0,

@@ -28,15 +28,11 @@ class HeaderModule extends Component {
         mainMenu:"",
         src:"",
       },
+        initial:false,
     },
   };
   constructor(props){
     super(props);
-    const data={
-      En:props.data.En
-      ,Fa:props.data.Fa};
-    this.setState({data:data,
-      bcolor:props.data.bcolor})
   }
   handleModalClose = (e) => {
     if (e != null)
@@ -62,6 +58,11 @@ class HeaderModule extends Component {
   getContent = () => {
     const {classes} = this.props;
     const {data} = this.state;
+    if("mainMenu" in this.props.data.En){
+        if(!this.state.initial){
+            this.setState({data:this.props.data,initial:true})
+        }
+    }
     const onLoad = (fileName) => {
       const {data} = this.state;
       data["En"]["src"] = fileName;

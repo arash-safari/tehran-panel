@@ -31,7 +31,8 @@ class OneSectionModule extends Component {
         footer: "",
         link: ""
       },
-    }
+    },
+      initial:false,
   };
   constructor(props){
     super(props);
@@ -68,6 +69,11 @@ class OneSectionModule extends Component {
       data[lang][type] = e.target.value;
       this.setState(data);
     };
+      if("title" in this.props.data.En){
+          if(!this.state.initial){
+              this.setState({data:this.props.data,initial:true})
+          }
+      }
     return (
       <Row className="show-grid">
         <form className="show-grid">
