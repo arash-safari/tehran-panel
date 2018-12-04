@@ -1,12 +1,13 @@
 import {
     UPLOAD_DATA, GET_ALL_PAGE_NAME,GET_PAGE_BY_ID
 } from "./types";
+import {href} from "../const";
 
 export const uploadData = (data, func) => {
     console.log(data);
     return dispatch => {
         if (data.id === "") {
-            fetch('http://localhost:3023/api/pages/', {
+            fetch(href+'/pages/', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -23,7 +24,7 @@ export const uploadData = (data, func) => {
                 }).then(func())
         }
         else {
-            fetch('http://localhost:3023/api/pages/', {
+            fetch(href+'/pages/', {
                 method: 'PUT',
                 headers: {
                     'Accept': 'application/json',
@@ -44,7 +45,7 @@ export const uploadData = (data, func) => {
 };
 export const getAllPageName = (name, func) => {
     return dispatch => {
-        fetch('http://localhost:3023/api/pages/page-names/' + name)
+        fetch(href+'/pages/page-names/' + name)
             .then(res => res.json())
             .then(res => {
                 dispatch({type: GET_ALL_PAGE_NAME, payload: res})
@@ -54,7 +55,7 @@ export const getAllPageName = (name, func) => {
 };
 export const getPageById = (id, func) => {
     return dispatch => {
-        fetch('http://localhost:3023/api/pages/' + id)
+        fetch(href+'/pages/' + id)
             .then(res => res.json())
             .then(res => {
                 dispatch({type: GET_PAGE_BY_ID, payload: res})
